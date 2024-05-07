@@ -1,6 +1,8 @@
 name: notifications-service-api-conformance-test
 on:
   push:
+    paths:
+      - "notifications-service/**"
   pull_request:
 
 jobs:

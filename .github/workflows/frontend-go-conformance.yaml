@@ -1,6 +1,8 @@
 name: frontend-go-conformance-test
 on:
   push:
+    paths:
+      - "frontend-go/**"
   pull_request:
 
 jobs:
