@@ -1,4 +1,4 @@
-name: Cp4 Service - Service Pipeline
+name: C4p Service - Service Pipeline
 env: 
   KO_DOCKER_REPO: docker.io/sandujar
 on:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    name: Cp4 Service - Service Pipeline 
+    name: C4p Service - Service Pipeline 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-go@v2
@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: ko-build/setup-ko@v0.6 #https://github.com/ko-build/setup-ko
-      - run: cd cp4-service && ko build -t v1.0.1
+      - run: cd c4p-service && ko build -t v1.0.1
