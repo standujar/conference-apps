@@ -1,4 +1,4 @@
-name: frontend-go-conformance-test
+name: Frontend Go - API Conformance
 on:
   push:
     paths:

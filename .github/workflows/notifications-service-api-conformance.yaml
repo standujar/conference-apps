@@ -1,4 +1,4 @@
-name: notifications-service-api-conformance-test
+name: Notifications Service - API Conformance
 on:
   push:
     paths:

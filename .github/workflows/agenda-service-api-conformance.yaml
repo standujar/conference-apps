@@ -1,4 +1,4 @@
-name: agenda-service-api-conformance-test
+name: Agenda Service - API Conformance
 on:
   push:
     paths:
