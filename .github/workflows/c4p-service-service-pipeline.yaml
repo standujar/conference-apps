@@ -28,4 +28,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: publish
     steps:
-      - uses: technosophos/action-gh-release@v6*
+      - uses: technote-space/release-github-actions@v6
