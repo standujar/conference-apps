@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish:
-    name: C4p Service - Service Pipeline 
+    name: C4p Service - Docker build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-go@v2
@@ -23,3 +23,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: ko-build/setup-ko@v0.6 #https://github.com/ko-build/setup-ko
       - run: cd c4p-service && ko build -t v1.0.1
+  release:
+    name: C4p Service - Release
+    runs-on: ubuntu-latest
+    needs: publish
+    steps:
+      - uses: technosophos/action-gh-release@v6*
