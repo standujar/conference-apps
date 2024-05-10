@@ -23,6 +23,6 @@ jobs:
     - name: Build the stack
       run: docker-compose -f notifications-service/tests/docker-compose.yaml up -d  
     - name: Install newman
-      run: npm install -g newman@5.3.2 && newman run api/postman/agenda-service.postman.json --env-var "baseUrl=http://localhost:8080"   
+      run: npm install -g newman@5.3.2 && newman run notifications-service/api/postman/agenda-service.postman.json --env-var "baseUrl=http://localhost:8080"   
     - name: Shutdown the stack
       run: docker-compose -f notifications-service/tests/docker-compose.yaml down 
